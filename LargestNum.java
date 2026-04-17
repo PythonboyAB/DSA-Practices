@@ -1,17 +1,24 @@
-public class  LargestNum  {
 
-    public static int FindLargestnum (int n[]){
-        int largest = n[0];
-        for(int i=1; i<n.length;i++){
-            if(largest<n[i]){
-                largest = n[i];
+public class LargestNum {
+
+    public static void largestNumFinder(int arr[]){
+        int largestNumber = arr[0];
+        int smallestNumber= arr[0];
+        for(int i=1;i<arr.length; i++){
+            if(arr[i]>largestNumber){
+                largestNumber=arr[i];
             }
-        }
-        return largest;
+            if(arr[i]<smallestNumber){
+                smallestNumber=arr[i];
+            }
+       }
+        System.out.println("largest number is " + largestNumber);  
+        System.out.println("smallest number is " + smallestNumber);
     }
- public static void main (String[] args){
-    int arr[] = {1,4,5,5,3,2,1,10,99,3,2,9};
-    System.out.print(FindLargestnum(arr));
 
- }
+     public static void main (String args[]){
+        int arr[] ={1,1,2,2,0,3,4,4,5,6,6,7};
+    largestNumFinder(arr);
+
+     }
 }

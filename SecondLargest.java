@@ -19,7 +19,7 @@ public class SecondLargest{
     }
 
     public static void main(String[] args){
-        int arr[] = { 9,8,7,6,55,42,3,21,1};
+        int arr[] = { 9,8,7,6,6,55,55,42,42,3,21,1};
         
        
         System.out.println(FindSecondLargest(arr));
