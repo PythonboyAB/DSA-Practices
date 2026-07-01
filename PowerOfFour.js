@@ -28,3 +28,4 @@ function powerOfFour(num) {
 }
 
 console.log(powerOfFour(12));
+console.log(powerOfFour(64));

@@ -1,5 +1,8 @@
 // Reverse the middle string "Word" and keep all thing same " 124323%$#word987*&& "
 
+// input: "124323%$#word987*&&"
+// output: "124323%$#drow987*&&"
+
 function reverseMiddleWord(str) {
   let word = "";
   let start = -1;
@@ -16,4 +19,5 @@ function reverseMiddleWord(str) {
   }
   return str.slice(0, start) + word + str.slice(end + 1);
 }
+
 console.log(reverseMiddleWord("124323%$#word987*&&"));
