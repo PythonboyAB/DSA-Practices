@@ -1,15 +1,26 @@
-const arr1 = [1, 3, 5, 2, 4, 4, 3, 2, 1, 2, 46, 10];
-const arr2 = [6, 7, 1, 2, 4, 4, 10, 46];
+// Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.
 
-let intersection = [];
+// Example 1:
 
-for (i = 0; i < arr1.length; i++) {
-  for (j = 0; j < arr2.length; j++) {
-    if (arr1[i] === arr2[j]) {
-      intersection.push(arr2[j]);
+// Input: nums1 = [1,2,2,1], nums2 = [2,2]
+// Output: [2]
+// Example 2:
+
+// Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+// Output: [9,4]
+// Explanation: [4,9] is also accepted.
+
+function intersection(nums1, nums2) {
+  const set1 = new Set(nums1);
+  const result = new Set();
+
+  for (let num of nums2) {
+    if (set1.has(num)) {
+      result.add(num);
     }
   }
+
+  return [...result];
 }
 
-const unique = new Set(intersection);
-console.log(unique);
+console.log(intersection([4, 9, 5], [9, 4, 9, 8, 4]));
